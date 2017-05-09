@@ -68,7 +68,7 @@ def lehman(n,l):
 	#print (b);
 	#print(len(b));
 	for it in range(1,len(b)):
-		print(it);
+		#print(it);
 		if(b[int(it)] != 1):
 			#print("Hay alguno que no es igual a 1")
 			comp = 1;
@@ -97,14 +97,14 @@ def calcular_bloques(vector_cadena,j, base):
 	while (i < len(vector_cadena)-1):
 		resultado = 0;
 		aux = j-1
-		print("BLOQUE------------------------")
+		#print("BLOQUE------------------------")
 		while (aux >= 0):
-			print(str(vector_cadena[i])+" * ("+str(base)+" ** "+str(aux));
+			#print(str(vector_cadena[i])+" * ("+str(base)+" ** "+str(aux));
 			resultado += vector_cadena[i] * (base ** aux);
-			print (resultado);
+			#print (resultado);
 			aux -= 1;
 			i += 1;
-		print(resultado);
+		#print(resultado);
 		vector_res += [resultado];
 	return vector_res;
 
@@ -157,7 +157,7 @@ def RSA(p,q,d):
 			vector_cadena += [encontrar_indice(cadena[i].lower())];
 	vector_bloques = calcular_bloques(vector_cadena,calcular_j(tam,n),tam);
 	e = inver(d,On);
-	print(e);
+	#print(e);
 	vector_cifrado = []
 	vector_cifrado = cifrar(vector_bloques,e,n);
 
